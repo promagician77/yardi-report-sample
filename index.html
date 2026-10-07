@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Yardi report sample</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231C3A4B'/><g fill='%23D7E8DC'><rect x='12' y='16' width='40' height='5'/><rect x='12' y='28' width='40' height='5'/><rect x='12' y='40' width='28' height='5'/></g></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div><h1>Aged delinquency &mdash; a worked sample</h1>
+      <p class="sub">Yardi Voyager custom report &middot; prepared for your posting by Sebastian</p></div>
+    <dl class="facts">
+      <div><dt>Database</dt><dd id="f-db">&mdash;</dd></div>
+      <div><dt>As of</dt><dd id="f-asof">&mdash;</dd></div>
+      <div><dt>Open AR</dt><dd id="f-ar">&mdash;</dd></div>
+    </dl>
+  </div>
+  <nav role="tablist">
+    <button role="tab" aria-selected="true" data-tab="sec">The leak</button>
+    <button role="tab" aria-selected="false" data-tab="rpt">The report</button>
+    <button role="tab" aria-selected="false" data-tab="sql">The SQL</button>
+    <button role="tab" aria-selected="false" data-tab="upg">Surviving upgrades</button>
+    <button role="tab" aria-selected="false" data-tab="notes">Notes</button>
+  </nav>
+</header>
+
+<main>
+<!-- ========== LEAK ========== -->
+<section id="sec" class="panel">
+  <p class="lede">Voyager enforces property access in the application layer. A custom report reads the tables underneath it, so unless the user&rsquo;s property list is joined into the query, the report quietly ignores every restriction the client set up. Below is the same report, same user, written both ways against the same data.</p>
+
+  <div class="cols">
+    <article class="box danger">
+      <div class="boxhead"><span class="who">Jordan Smith &middot; Regional Manager</span><span class="pill bad">Filter omitted</span></div>
+      <dl class="kv">
+        <div><dt>Properties returned</dt><dd id="n-props">&mdash;</dd></div>
+        <div><dt>Tenant rows</dt><dd id="n-rows">&mdash;</dd></div>
+        <div><dt>Receivables shown</dt><dd id="n-ar">&mdash;</dd></div>
+      </dl>
+      <p class="boxnote">Jordan is cleared for three properties. The report hands over eight.</p>
+    </article>
+    <article class="box safe">
+      <div class="boxhead"><span class="who">Jordan Smith &middot; Regional Manager</span><span class="pill good">Property list joined</span></div>
+      <dl class="kv">
+        <div><dt>Properties returned</dt><dd id="s-props">&mdash;</dd></div>
+        <div><dt>Tenant rows</dt><dd id="s-rows">&mdash;</dd></div>
+        <div><dt>Receivables shown</dt><dd id="s-ar">&mdash;</dd></div>
+      </dl>
+        <p class="boxnote">Exactly her portfolio: <span id="s-list" class="codes">&mdash;</span></p>
+    </article>
+  </div>
+
+  <div class="leak">
+    <h3>What the first version exposed</h3>
+    <p>Five properties outside her portfolio, <span id="l-rows">&mdash;</span> tenant rows, and <strong id="l-amt">&mdash;</strong> of receivables with named residents and unit numbers against them.</p>
+    <p class="codes" id="l-list">&mdash;</p>
+    <p class="small">Nothing errors. Nothing looks wrong. The report runs, the totals foot, and the only way anyone finds out is when a user mentions a property they shouldn&rsquo;t be able to name.</p>
+  </div>
+
+  <h3>The same report for someone who is entitled to all of it</h3>
+  <p class="note">Run as the portfolio controller, the secured version returns the full eight properties &mdash; because her list contains them. The filter restricts nobody improperly; it just stops the report deciding for itself.</p>
+  <dl class="kv wide">
+    <div><dt>Mei Chen &middot; Portfolio Controller</dt><dd id="m-props">&mdash;</dd></div>
+    <div><dt>Tenant rows</dt><dd id="m-rows">&mdash;</dd></div>
+    <div><dt>Receivables shown</dt><dd id="m-ar">&mdash;</dd></div>
+  </dl>
+</section>
+
+<!-- ========== REPORT ========== -->
+<section id="rpt" class="panel" hidden>
+  <p class="lede">The secured query, rendered the way it would come out of SSRS: grouped by property, aged into the four buckets a property accountant expects, subtotals that foot to the grand total. This is Jordan&rsquo;s run &mdash; three properties, because that is what she is cleared for.</p>
+  <div class="paper">
+    <div class="rpthead">
+      <div><p class="co">Northbridge Residential Group</p>
+        <p class="ttl">Aged Delinquency by Property</p></div>
+      <div class="rptmeta">
+        <p>As of <b id="r-asof">&mdash;</b></p>
+        <p>Run by <b>jsmith</b> &middot; Jordan Smith</p>
+        <p>cu_rpt_AgedDelinquency</p>
+      </div>
+    </div>
+    <div class="scroll">
+      <table class="ledger" id="ledger">
+        <thead><tr><th class="l">Tenant</th><th class="l u">Unit</th>
+          <th>Current</th><th>31&ndash;60</th><th>61&ndash;90</th><th>Over 90</th><th>Total due</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small">Figures come from the synthetic database described in the notes, not from a real client. The shape, the grouping and the aging logic are what gets delivered.</p>
+</section>
+
+<!-- ========== SQL ========== -->
+<section id="sql" class="panel" hidden>
+  <p class="lede">The whole report is one stored procedure. Two details are doing the work: the user&rsquo;s property list is a CTE that everything else joins through, and <code>@CurrentUser</code> is fed by SSRS from <code>User!UserID</code> rather than being a parameter someone can type over.</p>
+  <pre id="sqlbox"><code>Loading&hellip;</code></pre>
+  <p><a class="dl" href="files/rpt_aged_delinquency.sql" download>Download the .sql</a></p>
+</section>
+
+<!-- ========== UPGRADES ========== -->
+<section id="upg" class="panel" hidden>
+  <p class="lede">The second way custom reports go wrong is slower. They work for a year, Yardi pushes a Voyager upgrade, and on Monday morning the client&rsquo;s report is throwing an error or &mdash; worse &mdash; returning numbers that are quietly off. Most of it is avoidable at write time.</p>
+  <div class="rows">
+    <article><h4>Prefix every custom object</h4><p>Procedures, views and functions go out as <code>cu_</code> so an upgrade recognises them as yours and leaves them alone. An unprefixed object sitting in <code>dbo</code> is a candidate for replacement.</p></article>
+    <article><h4>Read documented columns, not convenient ones</h4><p>Voyager carries columns that are internal and columns that are contractual. Building on the first kind is what breaks on upgrade. Where Yardi publishes a view for something, the view is the safer surface even when the base table is faster to write against.</p></article>
+    <article><h4>Assume SaaS until told otherwise</h4><p>On Yardi Cloud you generally cannot create your own database objects; custom SQL goes through Yardi to be deployed, and that queue has a lead time. It changes how a project is sequenced, so it is worth establishing per client on day one rather than discovering it at delivery.</p></article>
+    <article><h4>Never hardcode a client&rsquo;s chart of accounts</h4><p>GL codes, charge codes and property codes differ at every client you serve. They belong in parameters or lookup joins, so the same report can be lifted to the next client with a parameter change instead of a rewrite.</p></article>
+    <article><h4>Ship a regression check with the report</h4><p>A short script that runs the report against known inputs and compares the totals. Run it after an upgrade and you know in minutes whether anything moved, rather than waiting for the client to find it.</p></article>
+    <article><h4>Write the handover for your consultant, not for me</h4><p>Parameters, source tables, assumptions, and what the report deliberately excludes. Your team fields the client&rsquo;s questions, so the documentation has to answer them without me in the room.</p></article>
+  </div>
+</section>
+
+<!-- ========== NOTES ========== -->
+<section id="notes" class="panel" hidden>
+  <div class="prose">
+    <h3>Why I built this rather than listing reports I&rsquo;ve written</h3>
+    <p>Your posting is short and the work is project-by-project, so the thing worth proving is not that I can name Voyager tables. It is what I do before a report reaches your client &mdash; because when it goes wrong, the call comes to your firm with your name on it, not mine.</p>
+
+    <h3>How I&rsquo;d work with a consulting firm</h3>
+    <ul>
+      <li><strong>Scoped per report.</strong> A short spec first: parameters, grouping, totals, what is deliberately excluded. Signed off before I write SQL, so there is no second round over what &ldquo;outstanding&rdquo; meant.</li>
+      <li><strong>Your name on the delivery.</strong> Documentation written for your consultants to hand straight to the client. No branding of mine anywhere in it.</li>
+      <li><strong>Improving inherited reports too.</strong> Half this work is someone else&rsquo;s undocumented RDL. I read it, write down what it actually does, confirm that against what the client thinks it does, and fix the gap &mdash; that gap is usually the real bug.</li>
+      <li><strong>Quiet by default.</strong> Project-by-project means you should not have to manage me. Spec, build, test against real data, deliver, answer questions.</li>
+    </ul>
+
+    <h3>What I&rsquo;d need at the start of each project</h3>
+    <ul>
+      <li>Whether that client is on Yardi Cloud or self-hosted, and who deploys.</li>
+      <li>Voyager version and platform, plus SSRS or YSI Reporting for this one.</li>
+      <li>A test database or a sanitised copy, and a user whose results we can both check.</li>
+      <li>For a rebuild: the existing RDL and whatever the client has said is wrong with it.</li>
+    </ul>
+
+    <h3>About this sample</h3>
+    <p>The database behind these figures is synthetic: eight properties, 442 units, 417 tenants, built to Voyager&rsquo;s conventions &mdash; <code>hMy</code> primary keys, <code>h</code>-prefixed foreign keys, AR activity in <code>artran</code>, and a per-user property list standing in for Voyager&rsquo;s security lists. The figures on the first tab are real query results against it, not illustrations. The stored procedure is written in T-SQL for Voyager; the demo numbers were produced by running the identical logic against the sample database.</p>
+    <p class="sig">Happy to walk through any of it, or take a real report of yours and say what I&rsquo;d change before it goes out.</p>
+  </div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

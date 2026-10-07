@@ -1,0 +1,442 @@
+{
+  "as_of": "2026-09-30",
+  "naive": {
+    "rows": 74,
+    "properties": 8,
+    "tenants": 71,
+    "total": 40996.55,
+    "over90": 14347.24
+  },
+  "jsmith": {
+    "rows": 36,
+    "properties": 3,
+    "tenants": 34,
+    "total": 17899.13,
+    "over90": 7172.18,
+    "name": "Jordan Smith",
+    "role": "Regional Manager"
+  },
+  "mchen": {
+    "rows": 74,
+    "properties": 8,
+    "tenants": 71,
+    "total": 40996.55,
+    "over90": 14347.24,
+    "name": "Mei Chen",
+    "role": "Portfolio Controller"
+  },
+  "leak": {
+    "properties": [
+      "brkln",
+      "dvnpt",
+      "elmst",
+      "grnvw",
+      "hrbrp"
+    ],
+    "rows": 38,
+    "amount": 23097.42
+  },
+  "entitled": [
+    "ashwd",
+    "cdrcr",
+    "frsth"
+  ],
+  "report_rows": [
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Caleb Kovacs",
+      "sUnitCode": "408",
+      "b0": 0,
+      "b31": 106.54,
+      "b61": 0,
+      "b91": 0,
+      "total": 106.54
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Caleb Whitfield",
+      "sUnitCode": "317",
+      "b0": 0,
+      "b31": 0,
+      "b61": 0,
+      "b91": 126.5,
+      "total": 126.5
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Grace Okafor",
+      "sUnitCode": "209",
+      "b0": 484.39,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 484.39
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Grace Whitfield",
+      "sUnitCode": "221",
+      "b0": 19.91,
+      "b31": 0,
+      "b61": 52.16,
+      "b91": 38.72,
+      "total": 110.78999999999999
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Hugo Castellanos",
+      "sUnitCode": "314",
+      "b0": 61.76,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 61.76
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Imani Delgado",
+      "sUnitCode": "211",
+      "b0": 166.78,
+      "b31": 0,
+      "b61": 0,
+      "b91": 1616.53,
+      "total": 1783.31
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Lena Lindqvist",
+      "sUnitCode": "317",
+      "b0": 0,
+      "b31": 94.92,
+      "b61": 0,
+      "b91": 0,
+      "total": 94.92
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Marcus Whitfield",
+      "sUnitCode": "317",
+      "b0": 65.75,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 65.75
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Naomi Lindqvist",
+      "sUnitCode": "401",
+      "b0": 0,
+      "b31": 0,
+      "b61": 180.59,
+      "b91": 0,
+      "total": 180.59
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Naomi Osei",
+      "sUnitCode": "203",
+      "b0": 33.34,
+      "b31": 53.29,
+      "b61": 0,
+      "b91": 1459.77,
+      "total": 1546.4
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Naomi Whitfield",
+      "sUnitCode": "115",
+      "b0": 53.31,
+      "b31": 0,
+      "b61": 0,
+      "b91": 311.97,
+      "total": 365.28
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Rosa Castellanos",
+      "sUnitCode": "123",
+      "b0": 121.56,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 121.56
+    },
+    {
+      "sCode": "ashwd",
+      "sName": "Ashwood Commons",
+      "tenant": "Trevor Delgado",
+      "sUnitCode": "107",
+      "b0": 0,
+      "b31": 232.93,
+      "b61": 34.99,
+      "b91": 0,
+      "total": 267.92
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Alicia Kovacs",
+      "sUnitCode": "322",
+      "b0": 0,
+      "b31": 181.36,
+      "b61": 28.24,
+      "b91": 0,
+      "total": 209.60000000000002
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Alicia Kovacs",
+      "sUnitCode": "406",
+      "b0": 0,
+      "b31": 54.89,
+      "b61": 0,
+      "b91": 0,
+      "total": 54.89
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Caleb Reyes",
+      "sUnitCode": "201",
+      "b0": 0,
+      "b31": 153.44,
+      "b61": 34.02,
+      "b91": 0,
+      "total": 187.46
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Grace Okafor",
+      "sUnitCode": "201",
+      "b0": 256.20000000000005,
+      "b31": 0,
+      "b61": 0,
+      "b91": 135.35,
+      "total": 391.55
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Hugo Delgado",
+      "sUnitCode": "224",
+      "b0": 0,
+      "b31": 106.08,
+      "b61": 1357.73,
+      "b91": 0,
+      "total": 1463.81
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Imani Okafor",
+      "sUnitCode": "323",
+      "b0": 0,
+      "b31": 132.47,
+      "b61": 101.28999999999999,
+      "b91": 0,
+      "total": 233.76
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Jamal Mbeki",
+      "sUnitCode": "218",
+      "b0": 0,
+      "b31": 0,
+      "b61": 23.34,
+      "b91": 101.82,
+      "total": 125.16
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Naomi Reyes",
+      "sUnitCode": "121",
+      "b0": 0,
+      "b31": 0,
+      "b61": 26.25,
+      "b91": 0,
+      "total": 26.25
+    },
+    {
+      "sCode": "cdrcr",
+      "sName": "Cedar Creek Apartments",
+      "tenant": "Sofia Whitfield",
+      "sUnitCode": "113",
+      "b0": 1635.94,
+      "b31": 79.11,
+      "b61": 0,
+      "b91": 89.14,
+      "total": 1804.19
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Caleb Lindqvist",
+      "sUnitCode": "324",
+      "b0": 0,
+      "b31": 0,
+      "b61": 38.89,
+      "b91": 88.0,
+      "total": 126.89
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Devon Nakamura",
+      "sUnitCode": "306",
+      "b0": 807.54,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 807.54
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Ethan Reyes",
+      "sUnitCode": "323",
+      "b0": 0,
+      "b31": 24.09,
+      "b61": 205.35,
+      "b91": 0,
+      "total": 229.44
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Grace Castellanos",
+      "sUnitCode": "123",
+      "b0": 43.0,
+      "b31": 51.4,
+      "b61": 0,
+      "b91": 0,
+      "total": 94.4
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Grace Lindqvist",
+      "sUnitCode": "112",
+      "b0": 38.66,
+      "b31": 0,
+      "b61": 59.77,
+      "b91": 376.34,
+      "total": 474.77
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Hugo Fairweather",
+      "sUnitCode": "104",
+      "b0": 46.02,
+      "b31": 0,
+      "b61": 53.03,
+      "b91": 0,
+      "total": 99.05000000000001
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Hugo Mbeki",
+      "sUnitCode": "318",
+      "b0": 0,
+      "b31": 241.20000000000002,
+      "b61": 1093.65,
+      "b91": 0,
+      "total": 1334.8500000000001
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Jamal Mbeki",
+      "sUnitCode": "115",
+      "b0": 309.28000000000003,
+      "b31": 0,
+      "b61": 0,
+      "b91": 0,
+      "total": 309.28000000000003
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Lena Kovacs",
+      "sUnitCode": "103",
+      "b0": 52.92,
+      "b31": 0,
+      "b61": 0,
+      "b91": 213.82999999999998,
+      "total": 266.75
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Marcus Reyes",
+      "sUnitCode": "414",
+      "b0": 0,
+      "b31": 109.78,
+      "b61": 0,
+      "b91": 59.88,
+      "total": 169.66
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Naomi Barros",
+      "sUnitCode": "304",
+      "b0": 0,
+      "b31": 164.58,
+      "b61": 47.17,
+      "b91": 35.77,
+      "total": 247.52
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Naomi Barros",
+      "sUnitCode": "404",
+      "b0": 23.24,
+      "b31": 0,
+      "b61": 0,
+      "b91": 1009.27,
+      "total": 1032.51
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Owen Barros",
+      "sUnitCode": "422",
+      "b0": 0,
+      "b31": 0,
+      "b61": 0,
+      "b91": 1509.29,
+      "total": 1509.29
+    },
+    {
+      "sCode": "frsth",
+      "sName": "Forest Hill Manor",
+      "tenant": "Rosa Okafor",
+      "sUnitCode": "402",
+      "b0": 102.46,
+      "b31": 0,
+      "b61": 1282.34,
+      "b91": 0,
+      "total": 1384.8
+    }
+  ]
+}
